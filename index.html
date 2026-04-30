@@ -13,14 +13,14 @@
     body {
       font-family: Arial, sans-serif;
       height: 100vh;
-      background-color: #000; /* Hintergrund für den Startbildschirm */
+      background-color: #000; 
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
     }
 
-    /* Overlay-Container */
+    
     #overlay {
       position: absolute;
       top: 0; 
@@ -39,12 +39,12 @@
 
     #overlay h1 {
       font-size: 3rem;
-      user-select: none; /* Verhindert Markieren des Textes */
+      user-select: none; 
     }
 
-    /* Hauptinhalt nach dem Klick */
+    
     #mainContent {
-      display: none; /* Versteckt, bis geklickt wird */
+      display: none; 
       width: 100%;
       height: 100vh;
       background: #f0f0f0;
@@ -77,22 +77,22 @@
 </head>
 <body>
 
-  <!-- Start-Overlay mit "Click to Enter" -->
+
   <div id="overlay" onclick="enterSite()">
     <h1>Click to Enter</h1>
   </div>
 
-  <!-- Hauptinhalt nach dem Klick -->
+  
   <div id="mainContent">
-    <h2>Willkommen auf meiner Seite!</h2>
+    <h2>Willkommen!</h2>
     <button onclick="alert('Du hast geklickt!')">Klick mich</button>
   </div>
 
   <script>
     function enterSite() {
-      // Overlay ausblenden
+      
       document.getElementById('overlay').style.display = 'none';
-      // Hauptinhalt einblenden
+   
       document.getElementById('mainContent').style.display = 'flex';
     }
   </script>
